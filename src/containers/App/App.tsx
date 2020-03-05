@@ -1,8 +1,6 @@
 import * as React from 'react';
 
-interface AppProps {}
-
-export const App = (props: AppProps) => {
+export const App = () => {
   return (
     <div>
       <h1>BIND React Boilerplate</h1>

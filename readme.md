@@ -7,7 +7,7 @@ Minimalistic and flexible React boilerplate.
 1. [Requirements](#requirements)
 2. [Setup](#setup)
 3. [Building and running](#building-and-running)
-4. [SSR](#server-side-rendering)
+4. [Server](#server)
 5. [Testing](#testing)
 
 ## Requirements
@@ -31,22 +31,23 @@ $ yarn                      # Installs dependencies
 ```
 $ yarn build:dev            # Development build
 $ yarn build:prod           # Production build
-$ yarn server:start         # Starts Express server (ssr)
 ```
 
-## Server-side rendering
+## Server
 
-Built-in simple server-side renderer (express)
+Built-in express server for development and production.
 
 ```
 $ cd server                 # Navigate to server's subdirectory
 $ yarn                      # Install dependencies
-$ yarn start:dev            # Sart server in development mode
-$ yarn start:prod           # Sart server in production mode
+$ yarn start:dev            # Sart dev server with HMR
+$ yarn start:prod           # Sart production server with SSR
 ```
 
 ## Testing
 
+Runs supplied tests with `Jest`
+
 ```
-$ yarn test
+$ yarn test                 # Run all tests
 ```

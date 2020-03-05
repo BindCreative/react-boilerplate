@@ -14,10 +14,11 @@ if (NODE_ENV === 'production') {
   router.use('^/$', renderer);
   router.use(express.static(path.resolve(__dirname, '../../build'), { maxAge: '1d' }));
 } else {
+  // eslint-disable-next-line global-require
   const webpackConfig = require('../../internal/webpack/webpack.dev.babel');
   const compiler = webpack(webpackConfig);
-  console.log(123, webpackConfig.output.publicPath);
   router.use(
+    // eslint-disable-next-line global-require
     require('webpack-dev-middleware')(compiler, {
       noInfo: false,
       publicPath: webpackConfig.output.publicPath,
@@ -25,6 +26,7 @@ if (NODE_ENV === 'production') {
   );
   router.use(
     webpackHotMiddleware(compiler, {
+      // eslint-disable-next-line no-console
       log: console.log,
       path: '/__webpack_hmr',
       heartbeat: 10 * 1000,
