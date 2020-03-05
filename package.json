@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "yarn build:clean",
-    "build:dev": "cross-env NODE_ENV=development webpack --config internal/webpack/webpack.dev.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
+    "build:dev": "cross-env NODE_ENV=development webpack --config internal/webpack/webpack.dev.babel.js --color -p --progress --hide-modules --display-optimization-bailout --watch",
     "build:prod": "cross-env NODE_ENV=production webpack --config internal/webpack/webpack.prod.babel.js --color -p --progress --hide-modules --display-optimization-bailout",
     "build:clean": "rimraf ./build",
     "lint": "eslint 'src/**/*.{ts,tsx,js,jsx}' '__test__/**/*.{ts,tsx,js,jsx}'",
@@ -16,7 +16,6 @@
   "dependencies": {
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1",
     "jest": "^25.1.0",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
@@ -32,7 +31,6 @@
     "@babel/preset-react": "^7.8.3",
     "@babel/preset-typescript": "^7.8.3",
     "@types/jest": "^25.1.3",
-    "@types/node": "^13.7.7",
     "@types/react": "^16.9.23",
     "@types/react-dom": "^16.9.5",
     "@types/styled-components": "^5.0.1",

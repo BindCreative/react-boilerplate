@@ -1,4 +1,3 @@
-// Important modules this config uses
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const WebpackPwaManifest = require('webpack-pwa-manifest');
@@ -11,7 +10,7 @@ module.exports = require('./webpack.base.babel')({
   mode: 'production',
   watch: false,
   // In production, we skip all hot-reloading stuff
-  entry: [require.resolve('react-app-polyfill/ie11'), path.join(process.cwd(), 'src/app.tsx')],
+  entry: [require.resolve('react-app-polyfill/ie11'), path.join(process.cwd(), 'src/app.ts')],
   output: {
     filename: '[name].[chunkhash].js',
     chunkFilename: '[name].[chunkhash].chunk.js',
@@ -112,11 +111,11 @@ module.exports = require('./webpack.base.babel')({
       ios: true,
       icons: [
         {
-          src: path.resolve('src/images/favicon-1024x1024.png'),
+          src: path.resolve('src/assets/images/favicon-1024x1024.png'),
           sizes: [72, 96, 128, 144, 192, 384, 512],
         },
         {
-          src: path.resolve('src/images/favicon-1024x1024.png'),
+          src: path.resolve('src/assets/images/favicon-1024x1024.png'),
           sizes: [120, 152, 167, 180],
           ios: true,
         },

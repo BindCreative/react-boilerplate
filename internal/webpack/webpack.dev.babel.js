@@ -12,8 +12,8 @@ module.exports = require('./webpack.base.babel')({
   // Add hot reloading in development
   entry: [
     require.resolve('react-app-polyfill/ie11'),
-    'webpack-hot-middleware/client?reload=true',
-    path.join(process.cwd(), 'src/app.tsx'),
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+    path.join(__dirname, '../../src/app.ts'),
   ],
   output: {
     filename: '[name].js',
@@ -29,7 +29,7 @@ module.exports = require('./webpack.base.babel')({
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: 'src/index.html',
+      template: path.join(__dirname, '../../src/index.html'),
     }),
     new CircularDependencyPlugin({
       exclude: /a\.js|node_modules/,

@@ -1,19 +1,21 @@
 # BIND React Typescript boilerplate
 
-Minimalistic and flexible React boilerplate for new React Typescript projects.
+Minimalistic and flexible React boilerplate.
 
 ## Table of contents
 
 1. [Requirements](#requirements)
 2. [Setup](#setup)
 3. [Building and running](#building-and-running)
-4. [Testing](#testing)
+4. [SSR](#server-side-rendering)
+5. [Testing](#testing)
 
 ## Requirements
 
 - [GIT](https://git-scm.com/)
 - [NVM](https://github.com/nvm-sh/nvm) - node version manager
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - suggested code formatter for VS Code
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) - code formatter for VS Code
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint) - linter for VS Code
 
 ## Setup
 
@@ -30,6 +32,17 @@ $ yarn                      # Installs dependencies
 $ yarn build:dev            # Development build
 $ yarn build:prod           # Production build
 $ yarn server:start         # Starts Express server (ssr)
+```
+
+## Server-side rendering
+
+Built-in simple server-side renderer (express)
+
+```
+$ cd server                 # Navigate to server's subdirectory
+$ yarn                      # Install dependencies
+$ yarn start:dev            # Sart server in development mode
+$ yarn start:prod           # Sart server in production mode
 ```
 
 ## Testing

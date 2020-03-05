@@ -1,7 +1,3 @@
-/**
- * COMMON WEBPACK CONFIGURATION
- */
-
 const path = require('path');
 const webpack = require('webpack');
 
@@ -11,7 +7,7 @@ module.exports = options => ({
   mode: options.mode,
   entry: options.entry,
   output: {
-    path: path.resolve(process.cwd(), 'build'),
+    path: path.join(__dirname, '../../build'),
     publicPath: '/',
     ...options.output,
   },

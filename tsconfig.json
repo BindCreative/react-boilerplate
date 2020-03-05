@@ -2,7 +2,7 @@
   "compilerOptions": {
     "incremental": true,
     "target": "es6",
-    "module": "esnext", //commonjs destroys 'dynamic imports' which is used for code splitting
+    "module": "esnext",
     "noImplicitAny": false,
     "preserveConstEnums": true,
     "baseUrl": "./src",
@@ -23,6 +23,7 @@
     "noUnusedLocals": false,
     "strict": true,
     "strictFunctionTypes": false,
+    "skipLibCheck": true,
     "pretty": true,
     "removeComments": true,
     "sourceMap": true,
@@ -32,5 +33,5 @@
     }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "server"]
 }
